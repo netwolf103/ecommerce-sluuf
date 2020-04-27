@@ -1,0 +1,22 @@
+{
+    "name": "netwolf103/ecommerce-sluuf",
+    "description": "Create product excel file of upload sluuf",
+    "type": "library",
+    "require": {
+        "php": "^7.0",
+        "phpoffice/phpexcel": "1.8.2"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Zhang Zhao",
+            "email": "netwolf103@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Netwolf103\\Ecommerce\\Sluuf\\": "src/Netwolf103/Ecommerce/Sluuf"
+        }
+    }    
+}

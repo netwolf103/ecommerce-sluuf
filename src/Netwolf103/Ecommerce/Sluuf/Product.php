@@ -181,9 +181,7 @@ class Product
 			->setKeywords($docTitle)
 			->setCategory($docTitle);
 
-		$excel = $this->excel;
-
-	    array_walk($this->getHeader(), function($item, $cell) use ($excel) {
+	    array_walk($this->getHeader(), function($item, $cell) {
 			$this->excel
 				->setActiveSheetIndex(0)
 				->setCellValue($cell.'1', $item)

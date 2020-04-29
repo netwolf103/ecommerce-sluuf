@@ -85,7 +85,7 @@ class Product
      * @param  float $minPrice
      * @return float
      */
-    public function getSpecialPrice(float $multiple = 10.0, float $suffix = 0.95, float $minPrice = 100.0): float
+    public function getSpecialPrice(float $multiple = 5.0, float $suffix = 0.95, float $minPrice = 100.0): float
     {
     	$price = $this->data['Price'] ?? '';
     	$price = explode(' ', $price);
@@ -183,7 +183,7 @@ class Product
 
 	    array_walk($this->getHeader(), function($item, $cell) {
 			$this->excel
-				->setActiveSheetIndex(0)
+				->getActiveSheet()
 				->setCellValue($cell.'1', $item)
 			;
 	    });

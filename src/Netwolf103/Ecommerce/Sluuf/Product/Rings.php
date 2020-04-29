@@ -40,7 +40,7 @@ class Rings extends Product
 		$row = 2;
 		foreach($this->getSizes() as $size) {
 			$this->excel
-				->setActiveSheetIndex(0)
+				->getActiveSheet()
 				->setCellValue('A'.$row, $this->getSku())
 				->setCellValue('B'.$row, sprintf('%s_White_%s', $this->getSku(), $size))
 				->setCellValue('C'.$row, $this->getName())
@@ -59,7 +59,7 @@ class Rings extends Product
 
 			foreach($imageUrls as $j => $imageUrl) {
 				$this->excel
-					->setActiveSheetIndex(0)
+					->getActiveSheet()
 					->setCellValue($cellsImage[$j].$row, $imageUrl)
 				;
 			}

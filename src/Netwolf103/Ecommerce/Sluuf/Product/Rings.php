@@ -58,9 +58,14 @@ class Rings extends Product
 			;
 
 			foreach($imageUrls as $j => $imageUrl) {
+				$cell = $cellsImage[$j] ?? '';
+				if (!$cell) {
+					continue;
+				}
+				
 				$this->excel
 					->getActiveSheet()
-					->setCellValue($cellsImage[$j].$row, $imageUrl)
+					->setCellValue($cell.$row, $imageUrl)
 				;
 			}
 

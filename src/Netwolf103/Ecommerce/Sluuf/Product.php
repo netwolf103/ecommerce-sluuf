@@ -182,6 +182,10 @@ class Product
 			->setCategory($docTitle);
 
 	    array_walk($this->getHeader(), function($item, $cell) {
+            if (!$cell) {
+                return false;
+            }
+            
 			$this->excel
 				->getActiveSheet()
 				->setCellValue($cell.'1', $item)
